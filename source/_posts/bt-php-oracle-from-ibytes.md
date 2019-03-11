@@ -4,22 +4,21 @@ date: 2019-03-11 11:05:45
 tags: 宝塔,PHP,Oracle
 ---
 
-[TOC]
-##前言
+## 前言
 ------------
 自从认识了宝塔面板这个好东西之后，我觉得我可以把我用了4年之久的Kloxo-MR面板换掉了。具体是如何的面板以及其如何的好用，我在此就不再“推销”了。可以进入[宝塔官网](http://www.bt.cn)看一看。
-##需求
+## 需求
 --------------
 1. 最近做一个项目，要求PHP的后端连接Oracle数据库，原想使用宝塔的“安装扩展”的功能来简单添加，可是并没有发现有该选项的存在。所以只能求助于自己编译和安装扩展了
 2. 虽然本教程是在安装有bt面板下进行操作的，但是这个安装方法其实是通用的，只是路径可能有所不同。
-##安装
+## 安装
 ----------------
-###环境
+### 环境
 * CentOS 7.4 x86_64
 * PHP 7.0.19
 * Apache24
 * InstantClient 12.2
-###Oracle InstantClient 安装
+### Oracle InstantClient 安装
 1. [下载地址](http://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html) 需要注意下载basic与SDK(Devel)两个包，多下的SDK是用来编译oci以及pdo_oci的。我选择的是rpm的包，能免几行代码。
 >如果直接wget可能会失败，因为下载会先让你登录，登陆之后，让浏览器直接下载，下载时，复制其URL后再wget即可
 2. 安装两个rpm，其实zip的话也可以，我使用的rpm，devel被放在了/usr/include/oracle/,basic被放在了/usr/lib/oracle/
@@ -48,7 +47,7 @@ install ok: channel://pecl.php.net/oci8-2.1.8
 Extension oci8 enabled in php.ini
 ```
 如果提示oci.h找不到，则说明C_INCLUDE_PATH没有配置成功，检查一下，可以echo $C_INCLUDE_PATH看看要include的目录是否正确。
-###安装PDO_OCI
+### 安装PDO_OCI
 我最初想用pecl 一键解决pdo_oci的问题，但是失败了，返回以下的提示：
 ```
 [root@localhost bin]# ./pecl install pdo_oci
@@ -82,7 +81,7 @@ env[ORACLE_HOME] = /usr/lib/oracle/12.2/client64/lib
 ```
 **注意，目录要和实际环境匹配**
 > 注意这个ORACLE_HOME ,和刚才在profile配的是不同的！
-##最终检查
+## 最终检查
 * php.ini 里面有没有加载这两个so
 必须有这两个：
 ```
