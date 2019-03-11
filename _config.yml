@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language:
-timezone:
+title: Chuuka の　Notes
+subtitle: Hafrans 的笔记
+description: 只是简单的笔记，都是一些小笔记，以后可能会替换掉ibytes
+keywords: Hafrans,ibytes
+author: 吕中华
+language: zh_CN
+timezone: PRC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://hafrans.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: cafe
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
