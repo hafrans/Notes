@@ -7,7 +7,7 @@ title: Chuuka の　Notes
 subtitle: Hafrans 的笔记
 description: 只是简单的笔记，都是一些小笔记，以后可能会替换掉ibytes
 keywords: Hafrans,ibytes
-author: 吕中华
+author: Hafrans
 language: zh_CN
 timezone: PRC
 
@@ -78,4 +78,6 @@ theme: cafe
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  branch: master
+  repo: https://github.com/hafrans/hafrans.github.io.git
